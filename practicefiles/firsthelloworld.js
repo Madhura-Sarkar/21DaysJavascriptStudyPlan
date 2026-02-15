@@ -1,0 +1,14 @@
+<script>
+console.log("hello world");
+</script>
+
+<html><head>   
+<title>Using innerHTML property</title>
+</head>
+<body>   
+<div id = "output"> </div>   
+<script>      
+document.getElementById("output").innerHTML = "Hello World";   
+</script>
+</body>
+<html>
