@@ -12,5 +12,3 @@ var customNum = doMath(343);
 console.log(customNum);
 var customNum = doMath("Tina");
 console.log(customNum);
-
-
