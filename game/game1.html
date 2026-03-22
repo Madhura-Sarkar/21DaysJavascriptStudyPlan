@@ -1,4 +1,3 @@
-
 <!--
 
 🎯 Number Guessing Game (Step-by-Step)
@@ -36,6 +35,7 @@ while (true) {
     }
 }
 </script> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,7 +107,7 @@ while (true) {
     }
 
     function restartGame() {
-      randomNumber = Math.floor(Math.random() * 100) + 1; //Math.random() * 100 = 0 to 99.999 and math.floor removes the .999 so [(0 to 99)+1] = [ 1 to 100]
+      randomNumber = Math.floor(Math.random() * 100) + 1;
       attempts = 0;
       document.getElementById("message").innerText = "";
       document.getElementById("attempts").innerText = "";
