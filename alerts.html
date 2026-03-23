@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 200px;
+            color: #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <!-- <button><a onclick="alert('Are you sure?')" href="https://www.youtube.com/">Click to Go to Youtube</a></button> -->
+    <!-- <button><a onclick="checker()" href="https://www.youtube.com/">Click to Go to Youtube</a></button> -->
+    <button class="jumbotron feature" onclick="checker()"><a href="https://www.youtube.com/">Click to Go to Youtube</a></button>
+
+    <!-- <script>alert("Welcome to my website \nIs it working properly?")</script> -->
+     <script>
+        function checker() {
+            var result = confirm('Are You Sure?');
+            if(result === false){
+                event.preventDefault();
+            }
+        }
+     </script>
+
+</body>
+</html>
