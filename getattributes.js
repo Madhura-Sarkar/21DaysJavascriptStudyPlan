@@ -19,3 +19,17 @@ console.log(spanHi.dataset.test)
 console.log(spanHi.dataset.longerName)
 // add new data 
 spanHi.dataset.newName = "Hi"
+
+
+// class 
+spanBye.classList.add('new-class')
+// removeclass
+spanBye.classList.remove('hi1')
+// toggle 
+spanBye.classList.toggle('hi3')
+
+
+// style modifying
+spanBye.style.color = "red" 
+spanBye.style.backgroundColor = "yellow" 
+spanBye.style.padding = "5px"
