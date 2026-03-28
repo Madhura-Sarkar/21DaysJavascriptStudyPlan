@@ -1,15 +1,15 @@
 // Create a function that returns a promise. The promise should resolve after 5 seconds with the value "Hello World!". Use the setTimeout function to delay the resolution of the promise. 
-function getHello() {
-    return new Promise((resolve, reject) => {
+function helloPromise(){
+    return new Promise((resolve, reject) =>{
         setTimeout(() => {
-            resolve("Hello World!");
+            resolve("Hello World!")
         }, 5000);
     });
 }
 
-getHello().then((message) => {
+helloPromise().then((message) => {
     console.log(message);
-});
+})
 
 
 
