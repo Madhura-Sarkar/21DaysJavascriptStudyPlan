@@ -1,0 +1,32 @@
+<!-- Create a list of items with checkboxes next to each item. When a checkbox is checked, cross out the corresponding item in the list. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checklist</title>
+    <style>
+        .checked {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><input type="checkbox"> Learn JavaScript</li>
+        <li><input type="checkbox"> Practice DOM</li>
+        <li><input type="checkbox"> Build Projects</li>
+    </ul>
+    <script>
+        const checkboxes = document.querySelectorAll("input[type='checkbox']");
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                if (checkbox.checked) {
+                    checkbox.parentElement.classList.add("checked");
+                } else {
+                    checkbox.parentElement.classList.remove("checked");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
