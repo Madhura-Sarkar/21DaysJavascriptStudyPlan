@@ -1,0 +1,24 @@
+<!-- Create a dropdown menu with three options. When an option is selected, display a message with the selected option -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>events 3 practice</title>
+</head>
+<body>
+    <select id="menu">
+        <option value="">Select an option</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="message"></p>
+    <script>
+        const menu = document.getElementById("menu");
+        const message = document.getElementById("message");
+        menu.addEventListener("change", function () {
+            message.textContent = "You selected: " + menu.value;
+        });
+    </script>
+</body>
+</html>
