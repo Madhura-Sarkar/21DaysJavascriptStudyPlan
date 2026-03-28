@@ -1,0 +1,19 @@
+<!-- Using just JavaScript, Create a button with the text "Click Me". When the button is clicked, change the text to "Clicked!". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Practice 1</title>
+</head>
+<body>
+<script>
+    const button = document.createElement("Button");
+    button.textContent = "Click Me"
+    document.body.appendChild(button)
+    button.addEventListener("click", function() {
+        button.textContent = "Clicked!";
+    });
+</script>
+
+</body>
+</html>
