@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Scramble Game</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .game {
+        padding: 20px;
+    }
+
+    #scrambled-word {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+</style>
+
+<body>
+
+    <div class="game">
+        <h2>🔤 Word Scramble Game</h2>
+
+        <p id="scrambled-word">word</p>
+
+        <input type="text" id="user-input" placeholder="Your guess">
+
+        <button onclick="checkAnswer()">Check</button>
+        <button onclick="newWord()">New Word</button>
+
+        <p id="result"></p>
+        <p id="score">Score: 0</p>
+    </div>
+
+
+    <script>
+        const words = ["javascript", "design", "html", "coding", "react", "developer"];
+
+        let currentWord = "";
+        let scrambledWord = "";
+        let score = 0;
+
+        // Shuffle function
+        function shuffleWord(word) {
+            return word
+                .split("")
+                .sort(() => Math.random() - 0.5)
+                .join("");
+        }
+
+        // Pick new word
+        function newWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            currentWord = words[randomIndex];
+
+            scrambledWord = shuffleWord(currentWord);
+
+            document.getElementById("scrambled-word").innerText = scrambledWord;
+            document.getElementById("user-input").value = "";
+            document.getElementById("result").innerText = "";
+        }
+
+        // Check answer
+        function checkAnswer() {
+            const userGuess = document.getElementById("user-input").value.toLowerCase();
+
+            if (userGuess === currentWord) {
+                document.getElementById("result").innerText = "✅ Correct!";
+                score++;
+            } else {
+                document.getElementById("result").innerText = "❌ Try again!";
+            }
+
+            document.getElementById("score").innerText = "Score: " + score;
+        }
+
+        // Load first word
+        newWord();
+    </script>
+</body>
+
+</html>
